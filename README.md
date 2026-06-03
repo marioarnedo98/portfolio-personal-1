@@ -1,4 +1,4 @@
-# Portfolio Personal - Mario A.
+# Portfolio Personal - Mario.
 
 Portfolio neofuturista con diseño estilo Omarchy, colores morados y negros.
 
