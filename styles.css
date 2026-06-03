@@ -796,6 +796,16 @@ button:hover ~ .custom-cursor {
    =========================== */
 
 @media (max-width: 768px) {
+    html,
+    body {
+        cursor: auto;
+    }
+
+    .custom-cursor,
+    .custom-cursor-trail {
+        display: none;
+    }
+
     .hero {
         padding: 6rem 0 3rem;
     }
