@@ -1,79 +1,120 @@
-# Portfolio Personal - Mario.
+# Mario
 
-Portfolio neofuturista con diseño estilo Omarchy, colores morados y negros.
+**Full Stack Developer & DevOps Engineer**
 
-## 🎨 Características
-
-- **Diseño neofuturista** con glassmorphism y efectos de glow
-- **Cursor personalizado** con efecto trail morado
-- **Fondo animado** con sistema de partículas conectadas
-- **Iconos Lucide** integrados perfectamente con el diseño
-- **Foto de perfil de GitHub** sincronizada automáticamente
-- **Animaciones suaves** al hacer scroll (AOS library)
-- **Responsive** para móviles y tablets
-
-## 🛠️ Tecnologías
-
-- **Vue 3** (vía CDN)
-- **Lucide Icons** - Iconos modernos y limpios
-- **AOS** - Animate On Scroll
-- **Canvas API** - Sistema de partículas personalizado
-- **CSS puro** con variables y animaciones
-
-## 📁 Estructura
-
-```
-portfolio-personal/
-├── index.html      # HTML principal con Vue
-├── styles.css      # Estilos personalizados
-├── app.js          # Lógica Vue y cursor
-├── particles.js    # Sistema de partículas animadas
-└── README.md       # Este archivo
-```
-
-## 🚀 Uso
-
-Simplemente abre `index.html` en tu navegador. No necesitas servidor ni instalaciones.
-
-## 🎨 Personalización
-
-### Colores
-Edita las variables CSS en `styles.css`:
-```css
-:root {
-    --purple-500: #6b46c1;
-    --purple-400: #8b5cf6;
-    /* ... más colores */
-}
-```
-
-### Partículas
-Ajusta la cantidad y comportamiento en `particles.js`:
-```javascript
-this.particleCount = 80;        // Número de partículas
-this.maxDistance = 150;         // Distancia de conexión
-```
-
-### Foto de perfil
-Se carga automáticamente desde GitHub. Si actualizas tu foto en GitHub, se actualizará aquí también:
-```html
-<img src="https://github.com/marioarnedo98.png" alt="Mario A.">
-```
-
-## 📝 Secciones
-
-1. **Hero** - Presentación con ventana de código
-2. **Sobre mí** - Perfil personal con toque irónico
-3. **Stack técnico** - Tecnologías organizadas por categoría
-4. **Proyectos** - Proyectos destacados con descripción
-5. **Contacto** - Información de contacto
-
-## 🔗 Enlaces
-
-- Email: marioarnedo1@gmail.com
-- GitHub: https://github.com/marioarnedo98
-- LinkedIn: [Añadir tu enlace]
+> Actualmente Desarrollando cosas
 
 ---
 
-Desarrollado con ❤️ y Vue.js
+## 👋 Sobre mí
+
+Hola 👋 Soy Mario, un tipo que programa cosas y después se preocupa de que _realmente funcionen_ (sí, incluso los viernes a última hora cuando nadie quiere tocar producción).
+
+Mi stack es un poco **_"Si a todo"_**: Vue.js, PHP/Symfony, .NET, Node.js, Python... básicamente, si hay que conectar algo con algo, probablemente ya lo haya hecho. O al menos lo intenté y _documenté el fracaso_ para la próxima vez.
+
+Me especializo en ese momento incómodo donde desarrollo y sistemas se miran y preguntan _"¿y ahora qué?"_ — Docker, Nginx, APIs que hablan entre sí, PDFs que no deberían existir pero existen, y servidores que necesitan cariño (y scripts de backup porque la vida es impredecible).
+
+**En resumen:** construyo aplicaciones web, las despliego, las mantengo vivas y cuando algo se rompe a las 3 AM, sé exactamente dónde buscar. Porque sí, _ese commit puede que fuese mío_.
+
+### Lo que hago
+
+⚡ **Desarrollo Full Stack**  
+Frontend moderno, backend robusto y APIs bien estructuradas
+
+🔗 **Integraciones**  
+Conexión entre sistemas, APIs externas y servicios documentales
+
+🚀 **DevOps**  
+Despliegues, infraestructura, Docker, Nginx y automatización
+
+---
+
+## 🛠️ Stack técnico
+
+### Frontend
+- Vue.js
+- Vuetify
+- Vite
+- JavaScript
+- Axios
+- PDF.js
+
+### Backend
+- PHP 8.2 / Symfony
+- .NET / C#
+- Node.js
+- Python / Django
+- APIs REST
+- MediatR / Unit of Work
+
+### DevOps
+- Docker
+- Nginx
+- Linux
+- Plesk
+- SFTP / S3
+- Backups automatizados
+
+### Integraciones
+- DocuWare
+- APIs externas
+- Autenticación por token
+- PDF / Base64
+- Sistemas documentales
+- Automatización
+
+---
+
+## 💼 Proyectos destacados
+
+### 01. Plataforma de gestión documental
+
+Aplicación orientada a la gestión y procesamiento de documentos, con integración de APIs externas, autenticación mediante token, descarga de archivos y visualización de PDFs.
+
+**Tecnologías:** Vue.js, Symfony, Axios, PDF.js, DocuWare
+
+**Valor:** Centralización de procesos documentales y reducción de tareas manuales
+
+---
+
+### 02. Sistema de despliegue y configuración
+
+Configuración de entorno web en servidor Linux con Nginx, gestión de permisos, usuarios SFTP, rutas protegidas y despliegue de aplicaciones.
+
+**Tecnologías:** Linux, Nginx, SFTP, PHP, Plesk
+
+**Valor:** Entorno más seguro, controlado y preparado para producción
+
+---
+
+### 03. Automatización de copias de seguridad
+
+Implementación de procesos para generar y enviar backups a almacenamiento S3, organizando rutas, permisos y estructura de archivos.
+
+**Tecnologías:** Linux, S3, Scripting, Automatización
+
+**Valor:** Mayor seguridad de datos y reducción de intervención manual
+
+---
+
+### 04. Aplicaciones internas con Vue.js
+
+Desarrollo de interfaces internas con Vue.js, Vuetify y Vite, incluyendo formularios, calendarios, diálogos, selectores dinámicos, validaciones y gestión de roles.
+
+**Tecnologías:** Vue.js, Vuetify, Vite, Axios
+
+**Valor:** Interfaces más ágiles, reutilizables y adaptadas al usuario
+
+---
+
+## 📬 Contacto
+
+Me interesa seguir aprendiendo, meterme en retos técnicos nuevos y entender bien cómo encajan las piezas, aunque reconozco que mi hábitat natural suele estar más cerca del código y del césped que de las reuniones eternas.
+
+📧 **Email:** itsme@mariothings.dev
+
+---
+
+_Estate quieto, ya lo hago yo._
+
+© 2026 Mario
