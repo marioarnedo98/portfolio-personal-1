@@ -29,6 +29,9 @@
     --gray-500: #6b6b6b;
     --gray-400: #9b9b9b;
     --gray-300: #d4d4d4;
+
+   /* Verde ok*/
+   --green-400: #53a654;
     
     /* Efectos */
     --glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
@@ -255,7 +258,7 @@ button:hover ~ .custom-cursor {
 }
 
 .tag-icon {
-    color: var(--purple-400);
+    color: var(--green-400);
     animation: pulse 2s ease-in-out infinite;
 }
 
