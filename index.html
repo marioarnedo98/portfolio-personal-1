@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario — Full Stack Developer & DevOps Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Cursor personalizado -->
+        <div class="custom-cursor" ref="cursor"></div>
+        <div class="custom-cursor-trail" ref="cursorTrail"></div>
+
+        <!-- Fondo animado -->
+        <div class="bg-gradient"></div>
+        <div class="grid-overlay"></div>
+        <canvas id="particles-canvas" class="particles-bg"></canvas>
+
+        <!-- Navegación -->
+        <nav class="nav" :class="{ 'scrolled': scrolled }">
+            <div class="container nav-content">
+                <div class="logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Mario</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero" @click.prevent="scrollTo('hero')">Inicio</a></li>
+                    <li><a href="#about" @click.prevent="scrollTo('about')">Sobre mí</a></li>
+                    <li><a href="#stack" @click.prevent="scrollTo('stack')">Stack</a></li>
+                    <li><a href="#projects" @click.prevent="scrollTo('projects')">Proyectos</a></li>
+                    <li><a href="#contact" @click.prevent="scrollTo('contact')">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-tag" data-aos="fade-up">
+                        <i data-lucide="circle-dot" class="tag-icon"></i> Disponible para proyectos
+                    </div>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        <span class="gradient-text">Full Stack Developer</span><br>
+                        & DevOps Engineer
+                    </h1>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        Desarrollo aplicaciones web completas, desde la interfaz hasta el despliegue en producción. 
+                        Trabajo conectando frontend, backend, APIs, automatización e infraestructura para crear 
+                        soluciones estables, mantenibles y preparadas para crecer.
+                    </p>
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#projects" @click.prevent="scrollTo('projects')" class="btn btn-primary">
+                            Ver proyectos
+                            <i data-lucide="arrow-right" class="btn-arrow"></i>
+                        </a>
+                        <a href="#contact" @click.prevent="scrollTo('contact')" class="btn btn-secondary">
+                            Contactar conmigo
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="window-title">developer.profile</div>
+                        </div>
+                        <div class="window-content">
+                            <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Mario"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Full Stack & DevOps"</span>,
+  <span class="code-prop">stack</span>: [<span class="code-string">"Vue.js"</span>, <span class="code-string">"Symfony"</span>, <span class="code-string">".NET"</span>],
+  <span class="code-prop">focus</span>: <span class="code-string">"Producción real"</span>,
+  <span class="code-prop">deploy</span>: () => <span class="code-keyword">true</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">[ 01 ]</span>
+                    <h2 class="section-title">Sobre mí</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-profile" data-aos="fade-right" data-aos-delay="100">
+                        <div class="profile-image-container">
+                            <img src="https://github.com/marioarnedo98.png" alt="Mario" class="profile-image">
+                            <div class="profile-border"></div>
+                        </div>
+                    </div>
+                    <div class="about-text" data-aos="fade-up" data-aos-delay="100">
+                        <p>
+                            Hola 👋 Soy Mario, un tipo que programa cosas y después se preocupa de que <em>realmente funcionen</em> 
+                            (sí, incluso los viernes a última hora cuando nadie quiere tocar producción).
+                        </p>
+                        <p>
+                            Mi stack es un poco <strong><i>"Si a todo"</i></strong>: Vue.js, PHP/Symfony, .NET, Node.js, Python... 
+                            básicamente, si hay que conectar algo con algo, probablemente ya lo haya hecho. 
+                            O al menos lo intenté y <em>documenté el fracaso</em> para la próxima vez.
+                        </p>
+                        <p>
+                            Me especializo en ese momento incómodo donde desarrollo y sistemas se miran y preguntan 
+                            <em>"¿y ahora qué?"</em> — Docker, Nginx, APIs que hablan entre sí, PDFs que no deberían existir 
+                            pero existen, y servidores que necesitan cariño (y scripts de backup porque la vida es impredecible).
+                        </p>
+                        <p>
+                            <strong>En resumen:</strong> construyo aplicaciones web, las despliego, las mantengo vivas y 
+                            cuando algo se rompe a las 3 AM, sé exactamente dónde buscar. Porque sí, <em>ese commit puede que fuese mio</em>.
+                        </p>
+                    </div>
+                    <div class="about-highlights" data-aos="fade-up" data-aos-delay="200">
+                        <div class="highlight-card">
+                            <i data-lucide="zap" class="highlight-icon"></i>
+                            <h3>Desarrollo Full Stack</h3>
+                            <p>Frontend moderno, backend robusto y APIs bien estructuradas</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i data-lucide="link-2" class="highlight-icon"></i>
+                            <h3>Integraciones</h3>
+                            <p>Conexión entre sistemas, APIs externas y servicios documentales</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i data-lucide="rocket" class="highlight-icon"></i>
+                            <h3>DevOps</h3>
+                            <p>Despliegues, infraestructura, Docker, Nginx y automatización</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Section -->
+        <section id="stack" class="section stack">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">[ 02 ]</span>
+                    <h2 class="section-title">Stack técnico</h2>
+                </div>
+                <div class="stack-grid">
+                    <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="category-title">
+                            <i data-lucide="palette" class="category-icon"></i>
+                            Frontend
+                        </h3>
+                        <ul class="tech-list">
+                            <li><span class="tech-bullet">▸</span> Vue.js</li>
+                            <li><span class="tech-bullet">▸</span> Vuetify</li>
+                            <li><span class="tech-bullet">▸</span> Vite</li>
+                            <li><span class="tech-bullet">▸</span> JavaScript</li>
+                            <li><span class="tech-bullet">▸</span> Axios</li>
+                            <li><span class="tech-bullet">▸</span> PDF.js</li>
+                        </ul>
+                    </div>
+                    <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="category-title">
+                            <i data-lucide="settings" class="category-icon"></i>
+                            Backend
+                        </h3>
+                        <ul class="tech-list">
+                            <li><span class="tech-bullet">▸</span> PHP 8.2 / Symfony</li>
+                            <li><span class="tech-bullet">▸</span> .NET / C#</li>
+                            <li><span class="tech-bullet">▸</span> Node.js</li>
+                            <li><span class="tech-bullet">▸</span> Python / Django</li>
+                            <li><span class="tech-bullet">▸</span> APIs REST</li>
+                            <li><span class="tech-bullet">▸</span> MediatR / Unit of Work</li>
+                        </ul>
+                    </div>
+                    <div class="stack-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="category-title">
+                            <i data-lucide="server" class="category-icon"></i>
+                            DevOps
+                        </h3>
+                        <ul class="tech-list">
+                            <li><span class="tech-bullet">▸</span> Docker</li>
+                            <li><span class="tech-bullet">▸</span> Nginx</li>
+                            <li><span class="tech-bullet">▸</span> Linux</li>
+                            <li><span class="tech-bullet">▸</span> Plesk</li>
+                            <li><span class="tech-bullet">▸</span> SFTP / S3</li>
+                            <li><span class="tech-bullet">▸</span> Backups automatizados</li>
+                        </ul>
+                    </div>
+                    <div class="stack-category" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="category-title">
+                            <i data-lucide="plug-zap" class="category-icon"></i>
+                            Integraciones
+                        </h3>
+                        <ul class="tech-list">
+                            <li><span class="tech-bullet">▸</span> DocuWare</li>
+                            <li><span class="tech-bullet">▸</span> APIs externas</li>
+                            <li><span class="tech-bullet">▸</span> Autenticación por token</li>
+                            <li><span class="tech-bullet">▸</span> PDF / Base64</li>
+                            <li><span class="tech-bullet">▸</span> Sistemas documentales</li>
+                            <li><span class="tech-bullet">▸</span> Automatización</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">[ 03 ]</span>
+                    <h2 class="section-title">Proyectos destacados</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-number">01</div>
+                        <h3 class="project-title">Plataforma de gestión documental</h3>
+                        <p class="project-description">
+                            Aplicación orientada a la gestión y procesamiento de documentos, con integración de APIs externas, 
+                            autenticación mediante token, descarga de archivos y visualización de PDFs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Symfony</span>
+                            <span class="tech-tag">Axios</span>
+                            <span class="tech-tag">PDF.js</span>
+                            <span class="tech-tag">DocuWare</span>
+                        </div>
+                        <div class="project-value">
+                            <strong>Valor:</strong> Centralización de procesos documentales y reducción de tareas manuales
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-number">02</div>
+                        <h3 class="project-title">Sistema de despliegue y configuración</h3>
+                        <p class="project-description">
+                            Configuración de entorno web en servidor Linux con Nginx, gestión de permisos, 
+                            usuarios SFTP, rutas protegidas y despliegue de aplicaciones.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Nginx</span>
+                            <span class="tech-tag">SFTP</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Plesk</span>
+                        </div>
+                        <div class="project-value">
+                            <strong>Valor:</strong> Entorno más seguro, controlado y preparado para producción
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-number">03</div>
+                        <h3 class="project-title">Automatización de copias de seguridad</h3>
+                        <p class="project-description">
+                            Implementación de procesos para generar y enviar backups a almacenamiento S3, 
+                            organizando rutas, permisos y estructura de archivos.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">S3</span>
+                            <span class="tech-tag">Scripting</span>
+                            <span class="tech-tag">Automatización</span>
+                        </div>
+                        <div class="project-value">
+                            <strong>Valor:</strong> Mayor seguridad de datos y reducción de intervención manual
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-number">04</div>
+                        <h3 class="project-title">Aplicaciones internas con Vue.js</h3>
+                        <p class="project-description">
+                            Desarrollo de interfaces internas con Vue.js, Vuetify y Vite, incluyendo formularios, 
+                            calendarios, diálogos, selectores dinámicos, validaciones y gestión de roles.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Vuetify</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Axios</span>
+                        </div>
+                        <div class="project-value">
+                            <strong>Valor:</strong> Interfaces más ágiles, reutilizables y adaptadas al usuario
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="contact-content" data-aos="fade-up">
+                    <div class="section-header">
+                        <span class="section-tag">[ 04 ]</span>
+                        <h2 class="section-title">¿Hablamos?</h2>
+                    </div>
+                    <p class="contact-description">
+                        Estoy abierto a colaborar en proyectos donde pueda aportar tanto en desarrollo como en 
+                        infraestructura, integraciones y mejora de procesos técnicos.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:marioarnedo1@gmail.com" class="contact-link" data-aos="fade-up" data-aos-delay="100">
+                            <i data-lucide="mail-warning" class="highlight-icon"></i>
+                            <span class="contact-text">marioarnedo1@gmail.com</span>
+                        </a>
+                    </div>
+                    <div class="contact-tagline" data-aos="fade-up" data-aos-delay="400">
+                        <p>Construyo aplicaciones web completas y me ocupo de que funcionen también fuera del entorno de desarrollo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>© 2026 Mario</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
