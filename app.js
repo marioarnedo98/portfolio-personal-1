@@ -7,7 +7,8 @@ createApp({
             cursorX: 0,
             cursorY: 0,
             cursorTrailX: 0,
-            cursorTrailY: 0
+            cursorTrailY: 0,
+            enableCursor: false
         };
     },
     mounted() {
@@ -30,6 +31,7 @@ createApp({
         // Cursor personalizado solo en dispositivos no táctiles
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         if (!isTouchDevice) {
+            this.enableCursor = true;
             document.addEventListener('mousemove', this.moveCursor);
             this.updateCursorTrail();
         }
@@ -69,6 +71,8 @@ createApp({
         },
 
         updateCursorTrail() {
+            if (!this.enableCursor) return;
+            
             // Interpolar la posición del trail con un pequeño retraso
             const dx = this.cursorX - this.cursorTrailX;
             const dy = this.cursorY - this.cursorTrailY;
