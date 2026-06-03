@@ -27,11 +27,12 @@ createApp({
         // Detectar scroll para navegación
         window.addEventListener('scroll', this.handleScroll);
 
-        // Cursor personalizado
-        document.addEventListener('mousemove', this.moveCursor);
-
-        // Actualizar trail del cursor con animación suave
-        this.updateCursorTrail();
+        // Cursor personalizado solo en dispositivos no táctiles
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if (!isTouchDevice) {
+            document.addEventListener('mousemove', this.moveCursor);
+            this.updateCursorTrail();
+        }
     },
     methods: {
         handleScroll() {
