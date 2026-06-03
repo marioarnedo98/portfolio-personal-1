@@ -761,6 +761,32 @@ button:hover ~ .custom-cursor {
     text-align: center;
     color: var(--gray-500);
     font-size: 0.9rem;
+    position: relative;
+}
+
+.kuromi-easter-egg {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.kuromi-easter-egg.aos-animate {
+    opacity: 1;
+}
+
+.kuromi-easter-egg img {
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(0 4px 20px rgba(139, 92, 246, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.kuromi-easter-egg:hover img {
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(0 6px 30px rgba(139, 92, 246, 0.5));
 }
 
 /* ===========================
@@ -841,6 +867,15 @@ button:hover ~ .custom-cursor {
     
     .container {
         padding: 0 1.5rem;
+    }
+
+    .kuromi-easter-egg {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .kuromi-easter-egg img {
+        width: 60px;
     }
 }
 
