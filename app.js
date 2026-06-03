@@ -60,6 +60,10 @@ createApp({
             if (this.$refs.cursor) {
                 this.$refs.cursor.style.left = this.cursorX + 'px';
                 this.$refs.cursor.style.top = this.cursorY + 'px';
+                this.$refs.cursor.style.opacity = '1';
+            }
+            if (this.$refs.cursorTrail) {
+                this.$refs.cursorTrail.style.opacity = '1';
             }
         },
 

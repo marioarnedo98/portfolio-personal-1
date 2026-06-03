@@ -72,6 +72,7 @@ body {
     transform: translate(-50%, -50%);
     transition: width 0.2s, height 0.2s, border-color 0.2s;
     box-shadow: var(--glow-purple);
+    opacity: 0;
 }
 
 .custom-cursor-trail {
@@ -85,6 +86,7 @@ body {
     transform: translate(-50%, -50%);
     transition: transform 0.15s ease-out;
     box-shadow: var(--glow-purple);
+    opacity: 0;
 }
 
 a:hover ~ .custom-cursor,
@@ -870,8 +872,8 @@ button:hover ~ .custom-cursor {
     }
 
     .kuromi-easter-egg {
-        bottom: 10px;
-        right: 10px;
+        bottom: 15px;
+        right: 15px;
     }
 
     .kuromi-easter-egg img {
